@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <title>ui-quadrants</title>
+    <script src="node_modules/polymer/platform.js"></script>
+    <link rel="import" href="node_modules/polymer/polymer.html">
+    <link rel="import" href="build/ui-quadrants.html">
+    <style>
+      body {
+        font-family: "Helvetica Neue", "Helvetica", Arial;
+        position: relative;
+      }
+
+      button {
+        padding:10px;
+        background-color:#efefef;
+        border:1px solid #666;
+      }
+    </style>
+  </head>
+  <body unresolved>
+      <ui-quadrants size="300" hoverColor='#e74c3c' clickColor='#c0392b' xLabel='Client Seniority' yLabel='Complexity of Project' labelColor='#444' callback="quadrantCallback"></ui-quadrants>
+
+      <script>
+        function quadrantCallback(quadrant) {
+          console.log(quadrant)
+        }
+      </script>
+  </body>
+</html>

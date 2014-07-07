@@ -1,0 +1,57 @@
+@axisColor: #333;
+@dashColor: #666;
+
+.transition(@duration:0.2s, @ease:ease-out) {
+  -webkit-transition: all @duration @ease;
+  -moz-transition: all @duration @ease;
+  -o-transition: all @duration @ease;
+  transition: all @duration @ease;
+}
+
+:host {
+  -webkit-user-select: none;
+  user-select: none;
+  &>div {
+    cursor:pointer;
+    position:relative;
+  }
+  .square {
+    background:white;
+    position:absolute;
+    .transition();
+    &#topleft, &#bottomleft {
+      border-left:2px solid @axisColor;
+    }
+    &#bottomright, &#bottomleft,   {
+      border-top:1px dashed @dashColor;
+      border-bottom:2px solid @axisColor;
+    }
+    &#topright, &#bottomright {
+      border-left: 1px dashed @dashColor;
+    }
+    &:hover {
+      .transition();
+    }
+    &.active {
+      .transition();
+      &:after{
+        content:'\2713';
+        display: block;
+        color: white;
+        font-size: 4em;
+        text-align: center;
+        padding-top:18px;
+      }
+    }
+  }
+
+  .label {
+    font-size: 0.8em;
+    position:absolute;
+    white-space: nowrap;
+    &.yLabel{
+      margin:3px;
+    }
+  }
+
+}
