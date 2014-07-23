@@ -4,7 +4,7 @@
     <title>ui-quadrants</title>
     <script src="node_modules/polymer/platform.js"></script>
     <link rel="import" href="node_modules/polymer/polymer.html">
-    <link rel="import" href="build/ui-quadrants.html">
+    <link rel="import" href="src/ui-quadrants.html">
     <style>
       body {
         font-family: "Helvetica Neue", "Helvetica", Arial;
@@ -19,7 +19,7 @@
     </style>
   </head>
   <body unresolved>
-      <ui-quadrants size="300" hoverColor='#e74c3c' clickColor='#c0392b' xLabel='Client Seniority' yLabel='Complexity of Project' labelColor='#444' callback="quadrantCallback"></ui-quadrants>
+      <ui-quadrants size="300" hoverColor='#e74c3c' clickColor='#c0392b' xLabel='Client Seniority' yLabel='Complexity of Project' labelColor='#444' callback="quadrantCallback" active="topright"></ui-quadrants>
 
       <script>
         function quadrantCallback(quadrant) {

@@ -1,9 +1,0 @@
-{
-  "name": "ui-quadrants",
-  "description": "Polymer element to let you select a quadrant in a foursquare",
-  "version": "0.0.1",
-  "main": "build/ui-quadrants.html",
-  "ignore": [
-    "demo.html"
-  ]
-}
