@@ -4,4 +4,4 @@
     Polymer 'ui-quadrants',
       quadrantClick: (ev) ->
         @active = ev.target.id
-        window[@callback](@active)
+        window[@callback](@active, ev)
